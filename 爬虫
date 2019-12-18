@@ -1,0 +1,4 @@
+import requests #引入requests
+r = request.get('https://www.sustech.edu.cn/') #南方科技大学官网网址
+r.text #将r以文本的方式显示出来
+pip install beautifulsoup3 #下载beautifulsoup
