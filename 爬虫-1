@@ -1,0 +1,9 @@
+import requests #引入requests
+r = request.get('https://www.baidu.com/') #提取网址
+request.get(url,params=None,**kwargs)#url:拟获取页面的url链接；params:url中的额外参数，字典或字节流格式，可选；**kwargs:12个控制访问的参数
+r.text #将r以文本的方式显示出来，由于百度首页有中文，显示出来的文本不一定看得懂
+r.status_code#状态码，200为访问成功
+r.encoding
+r.apparent_encoding
+r.encoding = 'utf-8'#转换码
+r.text#此时才可转换为中文
