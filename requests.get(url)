@@ -1,0 +1,28 @@
+r.status_code #http请求的返回状态，200表示连接成功，404表示失败
+r.text #http响应内容的字符串形式，即http对应的业面内容
+r.encoding #从http header中猜测的响应内容的编码方式，可能不能解析中文
+r.apparent_encoding #从内容分析出的响应内容的编码方式（备选编码方式），原则上比encoding更准确
+r.content#http响应内容的二进制形式
+
+requests库的异常
+requests.ConnectionError #网络连接错误异常，如DNS查询失败、拒绝连接等
+requests.HTTPError #HTTP错误异常
+requests.URLRequired #URL缺失异常
+requests.TooManyRedirects #超过最大重定向异常
+requests.ConnectTimeout #连接远程服务器异常
+requests.Timeout #请求URL超时，产生超时异常
+
+爬取网页的通用代码框架
+import requests
+def getHTMLText(url):
+  try:
+    r = requests.get(url,timeout=30)
+    r.raise_for_status() #
+    r.encoding = r.apparent_encoding
+    return r.text
+  except:
+    return '产生异常'
+    
+if __name__=='__main__':
+  url = 'http://www.baidu.com'
+  print(getHTMLText)
