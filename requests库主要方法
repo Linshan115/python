@@ -19,4 +19,4 @@ requests，request(method,url,**kwargs)
         r = requests.request('POST','http://python123.io/ws',data=kv)
         body = '主体内容'
         r = requests.request('POST','http://python123.io/ws',data=body)
-      json:JSON格式的数据，作为Request的内容
+      json:JSON格式的数据，作为Request的内容 #json是一种数据格式
