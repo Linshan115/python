@@ -10,4 +10,13 @@ requests，request(method,url,**kwargs)
   url:拟获取页面的url链接
   **kwargs:控制访问参数，共13个
       params:字典或字节序列，作为参数增加到url中 #字典是利用key查找value,可以直接利用{}创建，也可以利用dict()创建<http://c.biancheng.net/view/2212.html>
-      
+        kv = {'key1':'value1','key2':'value2'}
+        r = requests.request('GET','http://python123.io/ws',params=kv)
+        print(r,url)
+  http://python123.io/ws?key1=value1&key2=value2 #可筛选部分资源
+      data:字典、字节序列或文件对象，作为Request的内容
+        kv = {'key1':'value1','key2':'value2'}
+        r = requests.request('POST','http://python123.io/ws',data=kv)
+        body = '主体内容'
+        r = requests.request('POST','http://python123.io/ws',data=body)
+      json:JSON格式的数据，作为Request的内容
