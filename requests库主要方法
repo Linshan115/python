@@ -20,3 +20,25 @@ requests，request(method,url,**kwargs)
         body = '主体内容'
         r = requests.request('POST','http://python123.io/ws',data=body)
       json:JSON格式的数据，作为Request的内容 #json是一种数据格式
+        kv = {'key1':'value1','key2':'value2'}
+        r = requests.request('POST','http://python123.io/ws',json=kv)
+      header:字典，HTTP定制头
+        hd = {'user-agent':'Chrome/10'} #将Chrome/10代替user-agent字段，可模拟浏览器访问
+        r = requests.request('POST','http://python123.io/ws',header=gd)
+      cookies:字典或CookieJar,Requests中的cookie
+      auth:元组，支持HTTP认证功能
+      flies:字典类型，传输文件 #向某一个链接提交某一个文件
+        fs = {'file':open('data.xls'.'rb')}
+        r = requests.request('POST','http://python123.io/ws',flies=fs)
+      timeout:设定的超时时间，秒为单位 #未在规定时间返回，产生timeout的异常
+      proxies:字典类型，设定访问代理服务器，可以增加登录认证
+      allow_redirects:True/False,默认为True,重定向开关
+      stream：True/False,默认为True,获取内容立即下载开关
+      verify:True/False,默认为True,认证SSL证书开关
+      cert：本地SSL证书路径
+requests.get(url.params=None,**kwargs) #获取，kwargs12
+requests.head(url.**kwargs) #获取头部，kwargs13
+requests.post(url,data=None,json=None,**kwargs) #更新页面，kwargs11
+requests.put(url,data=None,**kwargs) #更新页面，kwargs12 
+requests.patch(url,data=None,**kwargs) #更新页面，kwargs12 
+requests.delete(url.**kwargs) #删除页面，kwargs13
