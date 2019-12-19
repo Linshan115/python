@@ -1,0 +1,13 @@
+requests，request(method,url,**kwargs)
+  method:请求方式。对应get/put/post等7种
+    r = requests.request('GET',url,**kwargs)
+    r = requests.request('HEAD',url,**kwargs)
+    r = requests.request('POST',url,**kwargs)
+    r = requests.request('PUT',url,**kwargs)
+    r = requests.request('PATCH',url,**kwargs)
+    r = requests.request('DELETE',url,**kwargs)
+    r = requests.request('OPTIONS',url,**kwargs)
+  url:拟获取页面的url链接
+  **kwargs:控制访问参数，共13个
+      params:字典或字节序列，作为参数增加到url中 #字典是利用key查找value,可以直接利用{}创建，也可以利用dict()创建<http://c.biancheng.net/view/2212.html>
+      
