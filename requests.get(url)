@@ -23,6 +23,6 @@ def getHTMLText(url):
   except:
     return '产生异常'
     
-if __name__=='__main__':
+if __name__=='__main__': #如果模块是被直接运行的，则代码块被运行，如果模块是被导入的，则代码块不被运行。
   url = 'http://www.baidu.com'
   print(getHTMLText(url))
