@@ -1,3 +1,6 @@
 Robots协议：在网站根目录下的robots.txt文件
   User-agent:*
   Disallow:/
+Robots协议的遵守
+  网络爬虫：自动或人工识别robots.txt,再进行内容爬取
+  约束性：Robots协议是建议但非约束性，可以不遵守，但存在法律风险
