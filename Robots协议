@@ -1,0 +1,3 @@
+Robots协议：在网站根目录下的robots.txt文件
+  User-agent:*
+  Disallow:/
