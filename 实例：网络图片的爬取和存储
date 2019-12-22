@@ -1,0 +1,8 @@
+http://www.dili360.com/public/images/magazine/banner_cng.jpg
+import requests
+try:
+  path = "D:/"
+  url = "http://www.dili360.com/public/images/magazine/banner_cng.jpg"
+  r = requests.get(url)
+  r.raise_for_status
+  
