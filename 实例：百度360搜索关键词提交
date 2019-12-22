@@ -1,12 +1,23 @@
-https://www.baidu.com/s?keyword
-https://www.360.com/s?keyword
+http://www.baidu.com/s?keyword
 import requests
 try:
     kv = {"wd":"python"}
-    url = "https://www.baidu.com/s"
+    url = "http://www.baidu.com/s"
     r = requests.get(url,params = kv)
     print(r.requests.url)
     r.raise_for_status()
     print(len(r.text))
 except:
     print("爬取异常")
+http://www.so.com/s?keyword
+import requests
+try:
+    kv = {"q":"python"}
+    url = "http://so.com/s"
+    r = requests.get(url,params = kv)
+    print(r.requests.url)
+    r.raise_for_status()
+    print(len(r.text))
+except:
+    print("爬取异常")
+
