@@ -1,6 +1,7 @@
 http://www.dili360.com/public/images/magazine/banner_cng.jpg
 import requests
-path = "D:/"
+root = "D:/"
+path = root + url.split('/')[-1]
 url = "http://www.dili360.com/public/images/magazine/banner_cng.jpg"
 r = requests.get(url)
 r.status_code
