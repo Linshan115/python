@@ -1,0 +1,16 @@
+http://m.ip138.com/ip.asp?ip=ipaddress
+import requests
+url = "http://m.ip138.com/ip.asp?ip="
+r = requests.get(url+"ipaddress")
+r.status_code
+r.text[-500:] #不约束范围可能会导致idle失效
+
+import requests
+url = "http://m.ip138.com/ip.asp?ip="
+try:
+  r = requests.get(url+"address")
+  r.raise_for_status()
+  r.encoding = r.apparent_encoding
+  print(r.text[-500:])
+except:
+  print("爬取失败")
