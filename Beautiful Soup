@@ -1,2 +1,10 @@
 Beautiful soup 的安装
 管理员权限打开cmd
+pip install beautifulsoup4
+Beautiful soup 小测
+import requests
+r = requests.get("http://python123.io/ws/demo.html")
+r.text
+demo = r.text
+from bs4 import BeautifulSoup
+soup = BeautifulSoup(demo,"html.parser")
