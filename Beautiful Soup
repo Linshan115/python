@@ -1,10 +1,21 @@
 Beautiful soup 的安装
-管理员权限打开cmd
-pip install beautifulsoup4
+  管理员权限打开cmd
+  pip install beautifulsoup4
 Beautiful soup 小测
-import requests
-r = requests.get("http://python123.io/ws/demo.html")
-r.text
-demo = r.text
-from bs4 import BeautifulSoup
-soup = BeautifulSoup(demo,"html.parser")
+  import requests
+  r = requests.get("http://python123.io/ws/demo.html")
+  r.text
+  demo = r.text
+  from bs4 import BeautifulSoup
+  soup = BeautifulSoup(demo,"html.parser")
+Beautiful Soup库：维护、解析标签树
+  P标签：<p class="title">…</p> #p表示这个标签的名称，一般成对出现，中间表明范围，class="title"表示属性0个或多个
+Beautiful Soup库的引用
+  from bs4 import BeatifulSoup
+  soup = BeautifulSoup("<html>data<html>","html.parser")
+  soup2 = BeautifulSoup(open("D://demo.html"),"html.parser")
+BeautifulSoup解析器
+  bs4的HTML解析器：BeautifulSoup(mk,"html.parser") 条件:安装bs4
+  
+
+
