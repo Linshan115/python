@@ -1,0 +1,14 @@
+import requests
+from bs4 import BeatifulSoup
+def getHTMLText(url):
+    return ""
+def fillUnivList(ulist,html):
+    pass
+def printUnivList(ulist,num):
+    print("Suc"+str(num))
+def main():
+  uinfo = []
+  url = 
+  htm1 = getHTMLText(url)
+  fillUnivList(uinfo,html)
+  printUnivList(uinfo,num)
